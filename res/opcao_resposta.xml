@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<sistema>
+<opcao_resposta>
+<opr_cod>3945</opr_cod>
+<opr_pergunta>612</opr_pergunta><opr_descricao>Proteção Total</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3946</opr_cod><opr_pergunta>612</opr_pergunta><opr_descricao>A Clássica</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3947</opr_cod><opr_pergunta>612</opr_pergunta><opr_descricao>Ilumina</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3948</opr_cod><opr_pergunta>612</opr_pergunta><opr_descricao>Toque de Seda</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3949</opr_cod><opr_pergunta>613</opr_pergunta><opr_descricao>Proteção Total</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3950</opr_cod><opr_pergunta>613</opr_pergunta><opr_descricao>Fosco Completo</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3951</opr_cod><opr_pergunta>613</opr_pergunta><opr_descricao>Rende e Cobre Muito</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3952</opr_cod><opr_pergunta>613</opr_pergunta><opr_descricao>AntiBactéria</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3953</opr_cod><opr_pergunta>614</opr_pergunta><opr_descricao>Fosco</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3954</opr_cod><opr_pergunta>614</opr_pergunta><opr_descricao>Acetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3955</opr_cod><opr_pergunta>614</opr_pergunta><opr_descricao>Semibrilho</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3956</opr_cod><opr_pergunta>614</opr_pergunta><opr_descricao>Semiacetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3957</opr_cod><opr_pergunta>615</opr_pergunta><opr_descricao>Sempre Nova</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3958</opr_cod><opr_pergunta>615</opr_pergunta><opr_descricao>Proteção Total</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3959</opr_cod><opr_pergunta>615</opr_pergunta><opr_descricao>AntiBactéria</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3960</opr_cod><opr_pergunta>615</opr_pergunta><opr_descricao>Ilumina</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3961</opr_cod><opr_pergunta>616</opr_pergunta><opr_descricao>Sempre Nova</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3962</opr_cod><opr_pergunta>616</opr_pergunta><opr_descricao>Fosco Completo</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3963</opr_cod><opr_pergunta>616</opr_pergunta><opr_descricao>A Clássica</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3964</opr_cod><opr_pergunta>616</opr_pergunta><opr_descricao>Toque de Brilho</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3965</opr_cod><opr_pergunta>617</opr_pergunta><opr_descricao>2 cores (Alumínio e Preto)</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3966</opr_cod><opr_pergunta>617</opr_pergunta><opr_descricao>1.500 cores no SelfColor</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3967</opr_cod><opr_pergunta>617</opr_pergunta><opr_descricao>10 cores</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3968</opr_cod><opr_pergunta>617</opr_pergunta><opr_descricao>1.000 cores no SelfColor</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3969</opr_cod><opr_pergunta>618</opr_pergunta><opr_descricao>Fosco</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3970</opr_cod><opr_pergunta>618</opr_pergunta><opr_descricao>Semiacetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3971</opr_cod><opr_pergunta>618</opr_pergunta><opr_descricao>Semibrilho</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3972</opr_cod><opr_pergunta>618</opr_pergunta><opr_descricao>Acetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3973</opr_cod><opr_pergunta>619</opr_pergunta><opr_descricao>Pulsante, Elementar e Plural</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3974</opr_cod><opr_pergunta>619</opr_pergunta><opr_descricao>Vibrante, Plural e Biológico</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3975</opr_cod><opr_pergunta>619</opr_pergunta><opr_descricao>Essencial, Vibrante e Óptico</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3976</opr_cod><opr_pergunta>619</opr_pergunta><opr_descricao>Imaterial, Racional e Elementar</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3977</opr_cod><opr_pergunta>620</opr_pergunta><opr_descricao>Brilhante e Acetinado</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3978</opr_cod><opr_pergunta>620</opr_pergunta><opr_descricao>Acetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3979</opr_cod><opr_pergunta>620</opr_pergunta><opr_descricao>Fosco</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3980</opr_cod><opr_pergunta>620</opr_pergunta><opr_descricao>Acetinado e fosco</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3981</opr_cod><opr_pergunta>621</opr_pergunta><opr_descricao>Penetra e protege a madeira</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3982</opr_cod><opr_pergunta>621</opr_pergunta><opr_descricao>Tem brilho intenso e duradouro</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3983</opr_cod><opr_pergunta>621</opr_pergunta><opr_descricao>Tinge e renova a madeira</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3984</opr_cod><opr_pergunta>621</opr_pergunta><opr_descricao>Tem 8 anos de garantia</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3985</opr_cod><opr_pergunta>622</opr_pergunta><opr_descricao>Semiacetinado</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3986</opr_cod><opr_pergunta>622</opr_pergunta><opr_descricao>Acetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3987</opr_cod><opr_pergunta>622</opr_pergunta><opr_descricao>Fosco</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3988</opr_cod><opr_pergunta>622</opr_pergunta><opr_descricao>Semibrilho</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3989</opr_cod><opr_pergunta>623</opr_pergunta><opr_descricao>Verniz Seca Rápido</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3990</opr_cod><opr_pergunta>623</opr_pergunta><opr_descricao>Verniz Marítimo</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3991</opr_cod><opr_pergunta>623</opr_pergunta><opr_descricao>Verniz Tingidor</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3992</opr_cod><opr_pergunta>623</opr_pergunta><opr_descricao>Verniz Ultra Proteção</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3993</opr_cod><opr_pergunta>624</opr_pergunta><opr_descricao>3 anos</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3994</opr_cod><opr_pergunta>624</opr_pergunta><opr_descricao>1 ano</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3995</opr_cod><opr_pergunta>624</opr_pergunta><opr_descricao>2 anos</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3996</opr_cod><opr_pergunta>624</opr_pergunta><opr_descricao>5 anos</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3997</opr_cod><opr_pergunta>625</opr_pergunta><opr_descricao>600ºC</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3998</opr_cod><opr_pergunta>625</opr_pergunta><opr_descricao>35ºC</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>3999</opr_cod><opr_pergunta>625</opr_pergunta><opr_descricao>75ºC</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4000</opr_cod><opr_pergunta>625</opr_pergunta><opr_descricao>80ºC</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4001</opr_cod><opr_pergunta>626</opr_pergunta><opr_descricao>até 500m² por demão</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4002</opr_cod><opr_pergunta>626</opr_pergunta><opr_descricao>até 300m² por demão</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4003</opr_cod><opr_pergunta>626</opr_pergunta><opr_descricao>até 180m² por demão</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4004</opr_cod><opr_pergunta>626</opr_pergunta><opr_descricao>até 450m² por demão</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4005</opr_cod><opr_pergunta>627</opr_pergunta><opr_descricao>30 minutos ao toque</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4006</opr_cod><opr_pergunta>627</opr_pergunta><opr_descricao>45 minutos ao toque</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4007</opr_cod><opr_pergunta>627</opr_pergunta><opr_descricao>25 minutos ao toque</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4008</opr_cod><opr_pergunta>627</opr_pergunta><opr_descricao>60 minutos ao toque</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4009</opr_cod><opr_pergunta>628</opr_pergunta><opr_descricao>Acetinado</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4010</opr_cod><opr_pergunta>628</opr_pergunta><opr_descricao>Fosco</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4011</opr_cod><opr_pergunta>628</opr_pergunta><opr_descricao>Semibrilho</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4012</opr_cod><opr_pergunta>628</opr_pergunta><opr_descricao>Semiacetinado</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4013</opr_cod><opr_pergunta>629</opr_pergunta><opr_descricao>Antimofo, resistente a limpeza e com altíssima durabilidade</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4014</opr_cod><opr_pergunta>629</opr_pergunta><opr_descricao>Acabamento brilhante, não descasca e é hidrorepelente</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4015</opr_cod><opr_pergunta>629</opr_pergunta><opr_descricao>Sem cheiro, não desbota e impermeabiliza a superfície</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4016</opr_cod><opr_pergunta>629</opr_pergunta><opr_descricao>Resiste a altas temperaturas, tem baixo respingamento e fácil retoque</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4017</opr_cod><opr_pergunta>630</opr_pergunta><opr_descricao>Voz</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4018</opr_cod><opr_pergunta>630</opr_pergunta><opr_descricao>Tom</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4019</opr_cod><opr_pergunta>630</opr_pergunta><opr_descricao>Cor</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4020</opr_cod><opr_pergunta>630</opr_pergunta><opr_descricao>Brilho</opr_descricao><opr_valida>0</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4112</opr_cod><opr_pergunta>620</opr_pergunta><opr_descricao>Brilhante</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+<opcao_resposta><opr_cod>4113</opr_cod><opr_pergunta>620</opr_pergunta><opr_descricao>Brilhante</opr_descricao><opr_valida>1</opr_valida></opcao_resposta>
+</sistema>

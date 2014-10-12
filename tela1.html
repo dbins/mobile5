@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+		<title>Sistema Teste</title>
+		<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</head>
+<body>
+	<div id="painel_perguntas">
+	<form method="post">
+	<table>
+		<tr>
+			<td><div id="pergunta"></div></td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" value="1" name="opcao" id="opcao1"><div id="opcao1_rotulo"></div><br/>
+				<input type="radio" value="2" name="opcao" id="opcao2"><div id="opcao2_rotulo"></div><br/>
+				<input type="radio" value="3" name="opcao" id="opcao3"><div id="opcao3_rotulo"></div><br/>
+				<input type="radio" value="4" name="opcao" id="opcao4"><div id="opcao4_rotulo"></div><br/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="hidden" name="contador" id="contador" value="1">
+				<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
+				<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
+				<input type="button" id="btn_responder" value="Responder">
+			</td>
+		</tr>
+	</table>
+	</form>
+	</div>
+	
+	<div id="painel_respostas" style="display:none;">
+		<div id="tabela_respostas"></div> 	
+		<p>&nbsp;</p>
+		<a href="index.html">Sair</a>
+	
+	</div>
+		<script type="text/javascript" src="libs/fastclick.min.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+</body>
+</html>
