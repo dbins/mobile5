@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.binsmobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android= "http://schemas.android.com/apk/res/android">
     <name>Jogo de Perguntas</name>
-    <description>Aplicação de testes Phonegap</description>
+    <description>
+	Aplicacao de testes Phonegap
+	</description>
     <author email="bins.br@gmail.com" href="http://www.leandrotonon.com.br/projetos/bins">
         Bins
     </author>
