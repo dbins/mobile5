@@ -61,6 +61,8 @@ function shuffleArray(array) {
 				return retorno;
 			}
 			
+			document.addEventListener("deviceready", onDeviceReady, false);
+			
 			//var perguntas = ["Pergunta1", "Pergunta2", "Pergunta3", "Pergunta4","Pergunta5"];
 			var quantidade_acertos = 0;
 			var codigo_pergunta = 612;
@@ -71,6 +73,7 @@ function shuffleArray(array) {
 			var tmp_respostas = [];
 			var tmp_acertos = [];
 			
+			function onDeviceReady() {
 			 $(document).ready(function(){
 				$.ajax({
 				type: "GET",
@@ -177,4 +180,5 @@ function shuffleArray(array) {
 					}
 				});
 			 });
+			 }
 			
