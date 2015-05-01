@@ -17,7 +17,9 @@ function shuffleArray(array) {
 				url: "res/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
+					alert('1');
 					$(data).find('opcao_resposta').each(function(){
+						alert('2');
 						var tmp_pergunta  = $(this).find("opr_pergunta").text();
 						if (tmp_pergunta  == Pergunta) {
 							var codigo = $(this).find("opr_cod").text();
@@ -75,7 +77,9 @@ function shuffleArray(array) {
 				url: "res/perguntas.xml",
 				dataType: "xml",
 				success: function(data) {
+					alert('3');
 					$(data).find('pergunta').each(function(){
+						alert('4');
 						var codigo = $(this).find("per_cod").text();
 						var pergunta = $(this).find("per_pergunta").text();
 						var tmp_array = [codigo, pergunta];
@@ -95,7 +99,9 @@ function shuffleArray(array) {
 				url: "res/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
+					alert('5');
 					$(data).find('opcao_resposta').each(function(){
+						alert('6');
 						var codigo = $(this).find("opr_cod").text();
 						var descricao = $(this).find("opr_descricao").text();
 						var valida = $(this).find("opr_valida").text();
@@ -113,11 +119,13 @@ function shuffleArray(array) {
 				ListarOpcoes(codigo_pergunta);
 				
 				$('#btn_responder').click(function(){
+					alert('7');
 					contador = $('#contador').val();
 					var tmp_contador = Math.abs(contador) - 1;
 					var tmp_resposta_atual = $('input:radio[name=opcao]:checked').val();
 					
 					if (tmp_resposta_atual !=""){
+						alert('8');
 						tmp_respostas.push(tmp_resposta_atual);
 						//Validar se a resposta esta certa
 						//tmp_acertos.push("ERRO");
@@ -136,8 +144,9 @@ function shuffleArray(array) {
 						ListarOpcoes(codigo_pergunta);
 						$('#contador').val(contador);
 						if (contador == 6) {
+							alert('9');
 							//Exibir o resultado na mesma pagina
-							//alert(tmp_respostas);
+							alert(tmp_respostas);
 							//,Montando o painel de respostas
 							var tmp_tabela;
 							tmp_tabela = '<table border="1">';
