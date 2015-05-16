@@ -117,7 +117,10 @@
 						opcoes_descricoes.push(tmp_conteudo);
 					});
 					opcoes_descricoes = shuffleArray(opcoes_descricoes);
-					}
+					},
+					error: function(xhr, status, error) {
+						alert(xhr.responseText);
+					 }
 				});
 				
 				//Carga inicial do sistema
