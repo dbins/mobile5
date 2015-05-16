@@ -1,4 +1,4 @@
-function shuffleArray(array) {
+			function shuffleArray(array) {
 				for (var i = array.length - 1; i > 0; i--) {
 					var j = Math.floor(Math.random() * (i + 1));
 					var temp = array[i];
@@ -19,7 +19,7 @@ function shuffleArray(array) {
 				success: function(data) {
 					alert('1');
 					$(data).find('opcao_resposta').each(function(){
-						alert('2');
+						
 						var tmp_pergunta  = $(this).find("opr_pergunta").text();
 						if (tmp_pergunta  == Pergunta) {
 							var codigo = $(this).find("opr_cod").text();
@@ -61,7 +61,7 @@ function shuffleArray(array) {
 				return retorno;
 			}
 			
-			document.addEventListener("deviceready", onDeviceReady, false);
+			
 			
 			//var perguntas = ["Pergunta1", "Pergunta2", "Pergunta3", "Pergunta4","Pergunta5"];
 			var quantidade_acertos = 0;
@@ -73,8 +73,10 @@ function shuffleArray(array) {
 			var tmp_respostas = [];
 			var tmp_acertos = [];
 			
-			function onDeviceReady() {
-			 $(document).ready(function(){
+			
+			
+			$(document).on('pageshow', '#tela1', function(){
+				alert('inicio perguntas');
 				$.ajax({
 				type: "GET",
 				url: "res/perguntas.xml",
@@ -82,7 +84,7 @@ function shuffleArray(array) {
 				success: function(data) {
 					alert('3');
 					$(data).find('pergunta').each(function(){
-						alert('4');
+						
 						var codigo = $(this).find("per_cod").text();
 						var pergunta = $(this).find("per_pergunta").text();
 						var tmp_array = [codigo, pergunta];
@@ -104,7 +106,7 @@ function shuffleArray(array) {
 				success: function(data) {
 					alert('5');
 					$(data).find('opcao_resposta').each(function(){
-						alert('6');
+						
 						var codigo = $(this).find("opr_cod").text();
 						var descricao = $(this).find("opr_descricao").text();
 						var valida = $(this).find("opr_valida").text();
@@ -129,6 +131,10 @@ function shuffleArray(array) {
 					
 					if (tmp_resposta_atual !=""){
 						alert('8');
+						
+						//Limpando todos os botoes
+						$('input[name=opcao]').prop('checked', false);
+						
 						tmp_respostas.push(tmp_resposta_atual);
 						//Validar se a resposta esta certa
 						//tmp_acertos.push("ERRO");
@@ -180,5 +186,5 @@ function shuffleArray(array) {
 					}
 				});
 			 });
-			 }
+			 
 			
