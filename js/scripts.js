@@ -72,7 +72,9 @@
 			var contador = 1;
 			var perguntas = [];
 			var opcoes_corretas = [];
+			var opcoes_corretas_FULL = [];
 			var opcoes_descricoes = [];
+			var opcoes_descricoes_FULL = [];
 			var tmp_respostas = [];
 			var tmp_acertos = [];
 			
@@ -119,6 +121,8 @@
 						}
 						opcoes_descricoes.push(tmp_conteudo);
 					});
+					opcoes_corretas_FULL = opcoes_corretas;
+					opcoes_descricoes_FULL = opcoes_descricoes;
 					opcoes_descricoes = shuffleArray(opcoes_descricoes);
 					},
 					error: function(xhr, status, error) {
@@ -145,7 +149,7 @@
 						tmp_respostas.push(tmp_resposta_atual);
 						//Validar se a resposta esta certa
 						//tmp_acertos.push("ERRO");
-						if (ValidarResposta(tmp_resposta_atual, opcoes_corretas)=="ACERTO"){
+						if (ValidarResposta(tmp_resposta_atual, opcoes_corretas_FULL)=="ACERTO"){
 							quantidade_acertos++;	
 						}
 						
@@ -178,8 +182,8 @@
 								var tmp_matriz = tmp_conteudo.split('*');
 								tmp_tabela += '<tr>';
 								tmp_tabela += '<td>' + tmp_matriz[1]  +'</td>';
-								tmp_tabela += '<td>' + DescricaoResposta(tmp_respostas[i], opcoes_descricoes) + '</td>';
-								tmp_tabela += '<td>' + ValidarResposta(tmp_respostas[i], opcoes_corretas) + '</td>';
+								tmp_tabela += '<td>' + DescricaoResposta(tmp_respostas[i], opcoes_descricoes_FULL) + '</td>';
+								tmp_tabela += '<td>' + ValidarResposta(tmp_respostas[i], opcoes_corretas_FULL) + '</td>';
 								tmp_tabela += '</tr>';
 							}
 							
