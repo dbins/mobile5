@@ -17,7 +17,7 @@
 				url: "http://www.misstrendy.com.br/xml/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
-					alert('1');
+					
 					$(data).find('opcao_resposta').each(function(){
 						
 						var tmp_pergunta  = $(this).find("opr_pergunta").text();
@@ -41,6 +41,7 @@
 			
 			function ValidarResposta(Resposta, Matriz){
 				var retorno = "ERRO";
+				alert('tamanho array:' . Matriz[w] . ' - codigo escolhido' . Resposta);
 				for (w = 0; w < Matriz.length; w++) { 
 					if (Math.abs(Resposta) == Math.abs(Matriz[w])) {
 						retorno = "ACERTO";
@@ -82,7 +83,7 @@
 				url: "http://www.misstrendy.com.br/xml/perguntas.xml",
 				dataType: "xml",
 				success: function(data) {
-					alert('3');
+					
 					$(data).find('pergunta').each(function(){
 						
 						var codigo = $(this).find("per_cod").text();
@@ -104,7 +105,7 @@
 				url: "res/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
-					alert('5');
+					
 					$(data).find('opcao_resposta').each(function(){
 						
 						var codigo = $(this).find("opr_cod").text();
@@ -119,8 +120,8 @@
 					opcoes_descricoes = shuffleArray(opcoes_descricoes);
 					},
 					error: function(xhr, status, error) {
-						alert(status);
-						alert(xhr.responseText);
+						//alert(status);
+						//alert(xhr.responseText);
 					 }
 				});
 				
