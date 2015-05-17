@@ -14,7 +14,7 @@
 				var tmp_opcao_descricao = [];
 				$.ajax({
 				type: "GET",
-				url: "res/opcao_resposta.xml",
+				url: "http://www.misstrendy.com.br/xml/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
 					alert('1');
@@ -79,8 +79,8 @@
 				alert('inicio perguntas');
 				$.ajax({
 				type: "GET",
-				url: "res/perguntas.xml",
-				dataType: "text",
+				url: "http://www.misstrendy.com.br/xml/perguntas.xml",
+				dataType: "xml",
 				success: function(data) {
 					alert('3');
 					$(data).find('pergunta').each(function(){
@@ -102,7 +102,7 @@
 				$.ajax({
 				type: "GET",
 				url: "res/opcao_resposta.xml",
-				dataType: "text",
+				dataType: "xml",
 				success: function(data) {
 					alert('5');
 					$(data).find('opcao_resposta').each(function(){
