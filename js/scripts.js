@@ -80,7 +80,7 @@
 				$.ajax({
 				type: "GET",
 				url: "res/perguntas.xml",
-				dataType: "xml",
+				dataType: "text",
 				success: function(data) {
 					alert('3');
 					$(data).find('pergunta').each(function(){
@@ -102,7 +102,7 @@
 				$.ajax({
 				type: "GET",
 				url: "res/opcao_resposta.xml",
-				dataType: "xml",
+				dataType: "text",
 				success: function(data) {
 					alert('5');
 					$(data).find('opcao_resposta').each(function(){
@@ -119,6 +119,7 @@
 					opcoes_descricoes = shuffleArray(opcoes_descricoes);
 					},
 					error: function(xhr, status, error) {
+						alert(status);
 						alert(xhr.responseText);
 					 }
 				});
