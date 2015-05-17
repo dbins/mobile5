@@ -1,3 +1,5 @@
+			//http://www.javascriptlint.com/online_lint.php
+			
 			function shuffleArray(array) {
 				for (var i = array.length - 1; i > 0; i--) {
 					var j = Math.floor(Math.random() * (i + 1));
@@ -41,7 +43,7 @@
 			
 			function ValidarResposta(Resposta, Matriz){
 				var retorno = "ERRO";
-				alert('tamanho array:' . Matriz[w] . ' - codigo escolhido' . Resposta);
+				alert('tamanho array:' + Matriz.length + ' - codigo escolhido' + Resposta);
 				for (w = 0; w < Matriz.length; w++) { 
 					if (Math.abs(Resposta) == Math.abs(Matriz[w])) {
 						retorno = "ACERTO";
