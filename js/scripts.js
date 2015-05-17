@@ -104,9 +104,10 @@
 					}
 				});
 				//Puxando as opcoes de respostas
+				alert('inicio opcoes');
 				$.ajax({
 				type: "GET",
-				url: "res/opcao_resposta.xml",
+				url: "http://www.misstrendy.com.br/xml/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
 					
