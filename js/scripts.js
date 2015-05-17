@@ -43,7 +43,6 @@
 			
 			function ValidarResposta(Resposta, Matriz){
 				var retorno = "ERRO";
-				alert('tamanho array:' + Matriz.length + ' - codigo escolhido' + Resposta);
 				for (w = 0; w < Matriz.length; w++) { 
 					if (Math.abs(Resposta) == Math.abs(Matriz[w])) {
 						retorno = "ACERTO";
@@ -81,7 +80,6 @@
 			
 			
 			$(document).on('pageshow', '#tela1', function(){
-				alert('inicio perguntas');
 				$.ajax({
 				type: "GET",
 				url: "http://www.misstrendy.com.br/xml/perguntas.xml",
@@ -104,7 +102,6 @@
 					}
 				});
 				//Puxando as opcoes de respostas
-				alert('inicio opcoes');
 				$.ajax({
 				type: "GET",
 				url: "http://www.misstrendy.com.br/xml/opcao_resposta.xml",
@@ -136,13 +133,13 @@
 				ListarOpcoes(codigo_pergunta);
 				
 				$('#btn_responder').click(function(){
-					alert('7');
+					
 					contador = $('#contador').val();
 					var tmp_contador = Math.abs(contador) - 1;
 					var tmp_resposta_atual = $('input:radio[name=opcao]:checked').val();
 					
 					if (tmp_resposta_atual !=""){
-						alert('8');
+						
 						
 						//Limpando todos os botoes
 						$('input[name=opcao]').prop('checked', false);
@@ -165,9 +162,9 @@
 						ListarOpcoes(codigo_pergunta);
 						$('#contador').val(contador);
 						if (contador == 6) {
-							alert('9');
+							
 							//Exibir o resultado na mesma pagina
-							alert(tmp_respostas);
+							
 							//,Montando o painel de respostas
 							var tmp_tabela;
 							tmp_tabela = '<table border="1">';
