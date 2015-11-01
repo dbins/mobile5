@@ -7,8 +7,9 @@
     <author email="bins.br@gmail.com" href="http://www.leandrotonon.com.br/projetos/bins">
         Bins
     </author>
-    <preference name="orientation" value="portrait" /> 
-	<preference name="fullscreen" value="false" />
+    <preference name="orientation" value="default" /> 
+	<preference name="fullscreen" value="true" />
+	<preference name='phonegap-version' value='cli-5.1.1' />
 	<gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />

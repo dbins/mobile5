@@ -167,13 +167,13 @@
 							
 							//,Montando o painel de respostas
 							var tmp_tabela;
-							tmp_tabela = '<table border="1">';
-							tmp_tabela += '<tr><td colspan="3" align="center">Voce acertou ' + quantidade_acertos + ' de 5</td></tr>';
+							tmp_tabela = '<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe">';
+							tmp_tabela += '<thead><tr><td colspan="3" align="center">Voce acertou ' + quantidade_acertos + ' de 5</td></tr>';
 							tmp_tabela += '<tr>';
 							tmp_tabela += '<td><strong>Pergunta</strong></td>';
 							tmp_tabela += '<td><strong>Sua resposta</strong></td>';
 							tmp_tabela += '<td><strong>Resultado</strong></td>';
-							tmp_tabela += '</tr>';
+							tmp_tabela += '</tr></thead><tbody>';
 							
 							for (i = 0; i < 5; i++) {
 								var tmp_conteudo = perguntas[i];
@@ -185,7 +185,7 @@
 								tmp_tabela += '</tr>';
 							}
 							
-							tmp_tabela += '</table>';
+							tmp_tabela += '</tbody></table>';
 							$('#tabela_respostas').html(tmp_tabela);
 							$("#painel_perguntas").hide();
 							$("#painel_respostas").show();
