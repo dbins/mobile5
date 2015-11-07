@@ -176,10 +176,10 @@
 							tmp_tabela += '</tr></thead><tbody>';
 							
 							for (i = 0; i < 5; i++) {
-								var tmp_conteudo = perguntas[i];
-								var tmp_matriz = tmp_conteudo.split('*');
+								var tmp_conteudo1 = perguntas[i];
+								var tmp_matriz1 = tmp_conteudo1.split('*');
 								tmp_tabela += '<tr>';
-								tmp_tabela += '<td>' + tmp_matriz[1]  +'</td>';
+								tmp_tabela += '<td>' + tmp_matriz1[1]  +'</td>';
 								tmp_tabela += '<td>' + DescricaoResposta(tmp_respostas[i], opcoes_descricoes_FULL) + '</td>';
 								tmp_tabela += '<td>' + ValidarResposta(tmp_respostas[i], opcoes_corretas_FULL) + '</td>';
 								tmp_tabela += '</tr>';
