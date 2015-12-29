@@ -3,39 +3,45 @@
     <head>
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
-		<title>Sistema Teste</title>
+		<title>Jogo de Perguntas e Respostas</title>
 		<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.mobile.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
+		<style type="text/css">
+			body {background-color:#F56200}
+			a {background-color:#FF0000; text-decoration: none; color: #FFFFFF}
+			h1 {color: #FF0000;  font-size: 48px; text-align:center}
+		</style>
     </head>
 <body>
-	<div data-role="page" id="inicio" data-theme="a">
+	<div data-role="page" id="inicio">
 
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
-			<h1>Perguntas!</h1>
+			
 		</div>
 
 		<div data-role="main" id="main" class="ui-content">
-	
+			<h1>Show de Perguntas!</h1>	
+			<div align="center">
 			<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe">
 				<thead>
 				<tr>
-					<td><h3>Show de Perguntas</h3></td>
+					<td>&nbsp;</td>
 				</tr>
 				</thead>
 				<tbody>
 				<tr>
-					<td><img src="lata-de-tinta.jpg"></td>
+					<td><img src="img/lata_tinta.png"></td>
 				</tr>
 				<tr>
-					<td>
+					<td align="center">
 						<a href="tela1.html" data-role="button">Clique aqui para iniciar</a>
 					</td>
 				</tr>
 				</tbody>
 			</table>
-	
+			</div>
 		</div>
 
 	</div>

@@ -9,6 +9,9 @@
 		<script src="js/jquery.mobile.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
 		<style type="text/css">
+		  body {background-color:#F56200}
+		  h1 {color: #FF0000;  font-size: 36px; text-align:center}
+		  a [type=button]{background-color:#FF0000; text-decoration: none; color: #FFFFFF}
 		  input[type=radio] {
 				border: 0px;
 				width: 100%;
@@ -29,13 +32,13 @@
 	</head>
 <body>
 
-	<div data-role="page" id="tela1" data-theme="a">
+	<div data-role="page" id="tela1">
 
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
-			<h1>Perguntas!</h1>
+			
 		</div>
-
-		<div data-role="main" id="main_tela1" class="ui-content">
+		<h1>Perguntas!</h1>
+		<div data-role="main" id="main_tela1">
 		
 			<div id="painel_perguntas">
 			<form method="post">
@@ -86,7 +89,7 @@
 						<input type="hidden" name="contador" id="contador" value="1">
 						<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
 						<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
-						<input type="button" id="btn_responder" data-role="button" data-theme="a" value="Responder">
+						<input type="button" id="btn_responder" value="Responder">
 					</td>
 				</tr>
 				</tbody>
