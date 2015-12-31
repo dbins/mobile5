@@ -1,5 +1,14 @@
 			//http://www.javascriptlint.com/online_lint.php
 			
+			function valButton(btn) {
+				var cnt = -1;
+				for (var i=btn.length-1; i > -1; i--) {
+					if (btn[i].checked) {cnt = i; i = -1;}
+				}
+				if (cnt > -1) return btn[cnt].value;
+				else return null;
+			}
+			
 			function shuffleArray(array) {
 				for (var i = array.length - 1; i > 0; i--) {
 					var j = Math.floor(Math.random() * (i + 1));
@@ -138,7 +147,7 @@
 					var tmp_contador = Math.abs(contador) - 1;
 					var tmp_resposta_atual = $('input:radio[name=opcao]:checked').val();
 					
-					if (tmp_resposta_atual !=""){
+					if (tmp_resposta_atual != null){
 						
 						
 						//Limpando todos os botoes
