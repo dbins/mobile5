@@ -18,6 +18,10 @@
 				height: 40px;
 		  }	
 		  
+		  input[type="submit"]{
+				background-color:#FF0000; text-decoration: none; color: #FFFFFF
+			}
+		  
 		  /* Add alternating row stripes */
 			.table-stripe tbody tr:nth-child(odd) td,
 			.table-stripe tbody tr:nth-child(odd) th {
@@ -27,6 +31,10 @@
 			.table-stripe thead th,
 			.table-stripe tbody tr:last-child {
 			  border-bottom: 1px solid rgba(0, 0, 0, .1);
+			}
+			.table-stripe thead th {
+				background-color: #000000;
+				color: #FFFFFF;
 			}
 		</style>
 	</head>
@@ -45,7 +53,7 @@
 			<div id="painel_perguntas">
 			
 			<form method="post">
-			<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe" >
+			<table class="table-stripe" border="0" width="90%" >
 				<thead>
 				<tr>
 					<td colspan="2">&nbsp;</td>
@@ -88,11 +96,12 @@
 					<td colspan="2">&nbsp;</td>
 				</tr>
 				<tr>
-					<td>
+					<td colspan="2">
+						<input type="button" id="btn_responder" value="Responder" style="background-color:#FF0000; text-decoration: none; color: #FFFFFF">
 						<input type="hidden" name="contador" id="contador" value="1">
 						<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
 						<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
-						<input type="button" id="btn_responder" data-role="button" value="Responder">
+						
 					</td>
 				</tr>
 				</tbody>

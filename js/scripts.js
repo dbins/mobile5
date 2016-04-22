@@ -172,17 +172,17 @@
 						ListarOpcoes(codigo_pergunta);
 						$('#contador').val(contador);
 						if (contador == 6) {
-							
+							$('#pergunta').html('');
 							//Exibir o resultado na mesma pagina
 							
 							//,Montando o painel de respostas
 							var tmp_tabela;
 							tmp_tabela = '<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe">';
-							tmp_tabela += '<thead><tr><td colspan="3" align="center">Voce acertou ' + quantidade_acertos + ' de 5</td></tr>';
+							tmp_tabela += '<thead><tr><td colspan="3" align="center" bgcolor="#FFFFFF"><strong>Voce acertou ' + quantidade_acertos + ' de 5</strong></td></tr>';
 							tmp_tabela += '<tr>';
-							tmp_tabela += '<td><strong>Pergunta</strong></td>';
-							tmp_tabela += '<td><strong>Sua resposta</strong></td>';
-							tmp_tabela += '<td><strong>Resultado</strong></td>';
+							tmp_tabela += '<td  bgcolor="#000000"><strong><font color="#FFFFFF">Pergunta</font></strong></td>';
+							tmp_tabela += '<td bgcolor="#000000"><strong><font color="#FFFFFF">Sua resposta</font></strong></td>';
+							tmp_tabela += '<td bgcolor="#000000"><strong><font color="#FFFFFF">Resultado</font></strong></td>';
 							tmp_tabela += '</tr></thead><tbody>';
 							
 							for (i = 0; i < 5; i++) {
