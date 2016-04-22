@@ -37,15 +37,18 @@
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
 			
 		</div>
-		<h1>Perguntas!</h1>
-		<div data-role="main" id="main_tela1">
 		
+		<div data-role="main" id="main_tela1">
+			<h1><font color="#FFFFFF">Perguntas!</font></h1>
+			<div id="pergunta"></div>
+			<p>&nbsp;</p>
 			<div id="painel_perguntas">
+			
 			<form method="post">
 			<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe" >
 				<thead>
 				<tr>
-					<td colspan="2"><div id="pergunta"></div></td>
+					<td colspan="2">&nbsp;</td>
 				</tr>
 				</thead>
 				<tbody>
@@ -89,7 +92,7 @@
 						<input type="hidden" name="contador" id="contador" value="1">
 						<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
 						<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
-						<input type="button" id="btn_responder" value="Responder">
+						<input type="button" id="btn_responder" data-role="button" value="Responder">
 					</td>
 				</tr>
 				</tbody>

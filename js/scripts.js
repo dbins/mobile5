@@ -99,6 +99,7 @@
 						
 						var codigo = $(this).find("per_cod").text();
 						var pergunta = $(this).find("per_pergunta").text();
+						
 						var tmp_array = [codigo, pergunta];
 						var tmp_conteudo = codigo + '*' + pergunta;
 						perguntas.push(tmp_conteudo);
