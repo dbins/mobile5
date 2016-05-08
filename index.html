@@ -36,7 +36,8 @@
 				</tr>
 				<tr>
 					<td align="center">
-						<a href="tela1.html" data-role="button">Clique aqui para iniciar</a>
+						<a id="btn_iniciar" href="tela1.html" data-role="button">Clique aqui para iniciar</a>
+						<div id="aviso_offline" style="display:none;">Não existe conexão com a Internet!</div>
 					</td>
 				</tr>
 				</tbody>
@@ -49,5 +50,8 @@
 	
 	<script type="text/javascript" src="libs/fastclick.min.js"></script>
 	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript">
+        $(document).ready(onDeviceReady());
+    </script>
 </body>
 </html>

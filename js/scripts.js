@@ -1,5 +1,71 @@
 			//http://www.javascriptlint.com/online_lint.php
 			
+			//Funcoes do Phonegap
+			var isPhoneGapReady = false;
+			var isConnected = false;
+			var isHighSpeed = false;
+			var tipo_conexao = "";
+			var email_aplicativo;
+			var latitude = "";
+			var longitude = "";
+			
+			
+			//$(document).ready(function(){
+			document.addEventListener("deviceready", onDeviceReady, false);
+			//});
+			 
+			function onDeviceReady() {
+				isPhoneGapReady = true;
+				// detect for network access
+				networkDetection();
+				// attach events for online and offline detection
+				document.addEventListener("online", onOnline, false);
+				document.addEventListener("offline", onOffline, false);
+			}
+			
+			function networkDetection() {
+				if (isPhoneGapReady) {
+					
+					
+					var states = {};
+					states[navigator.connection.UNKNOWN]  = 'Unknown connection';
+					states[navigator.connection.ETHERNET] = 'Ethernet connection';
+					states[navigator.connection.WIFI]     = 'WiFi connection';
+					states[navigator.connection.CELL_2G]  = 'Cell 2G connection';
+					states[navigator.connection.CELL_3G]  = 'Cell 3G connection';
+					states[navigator.connection.CELL_4G]  = 'Cell 4G connection';
+					states[navigator.connection.NONE]     = 'No network connection';
+					var tipo_conexao = states[navigator.connection.type];
+					
+					if (tipo_conexao != 'No network connection') {
+						isConnected = true;
+					}
+					
+				}	
+			}
+			
+			function onOnline() {
+				isConnected = true;
+			}
+			function onOffline() {
+				isConnected = false;
+			}
+			
+			function ValidarNavegacao(){
+				if (isPhoneGapReady){
+					if (isConnected) {
+						//Continuar
+					} else {
+						navigator.notification.alert('Não existe conexão com a Internet', alertDismissed, 'Jogo de Perguntas', 'OK');
+						$.mobile.changePage("index.html");
+					}				
+				} else {
+					navigator.notification.alert('O aplicativo não está pronto!', alertDismissed, 'Jogo de Perguntas', 'OK');
+					$.mobile.changePage("index.html");
+				}
+			}
+			
+			//Funcoes do aplicativo
 			function valButton(btn) {
 				var cnt = -1;
 				for (var i=btn.length-1; i > -1; i--) {
@@ -25,7 +91,7 @@
 				var tmp_opcao_descricao = [];
 				$.ajax({
 				type: "GET",
-				url: "http://www.misstrendy.com.br/xml/opcao_resposta.xml",
+				url: "http://www.dbins.com.br/ferramentas/interior/xml/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
 					
@@ -89,9 +155,25 @@
 			
 			
 			$(document).on('pageshow', '#tela1', function(){
+				if (isPhoneGapReady){
+					if (isConnected) {
+						$('#aviso_offline').hide();
+						$('#btn_iniciar').show();
+					} else {
+						$('#aviso_offline').show();
+						$('#btn_iniciar').hide();
+					}
+				} else {
+					$('#aviso_offline').show();
+					$('#btn_iniciar').hide();
+				}
+			});
+			
+			$(document).on('pageshow', '#tela1', function(){
+				ValidarNavegacao();
 				$.ajax({
 				type: "GET",
-				url: "http://www.misstrendy.com.br/xml/perguntas.xml",
+				url: "http://www.dbins.com.br/ferramentas/interior/xml/perguntas.xml",
 				dataType: "xml",
 				success: function(data) {
 					
@@ -114,7 +196,7 @@
 				//Puxando as opcoes de respostas
 				$.ajax({
 				type: "GET",
-				url: "http://www.misstrendy.com.br/xml/opcao_resposta.xml",
+				url: "http://www.dbins.com.br/ferramentas/interior/xml/opcao_resposta.xml",
 				dataType: "xml",
 				success: function(data) {
 					
