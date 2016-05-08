@@ -154,7 +154,7 @@
 			
 			
 			
-			$(document).on('pageshow', '#tela1', function(){
+			$(document).on('pageshow', '#inicio', function(){
 				if (isPhoneGapReady){
 					if (isConnected) {
 						$('#aviso_offline').hide();
@@ -260,9 +260,9 @@
 							//,Montando o painel de respostas
 							var tmp_tabela;
 							tmp_tabela = '<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe">';
-							tmp_tabela += '<thead><tr><td colspan="3" align="center" bgcolor="#FFFFFF"><strong>Voce acertou ' + quantidade_acertos + ' de 5</strong></td></tr>';
+							tmp_tabela += '<thead><tr><td height="70" colspan="3" align="center" bgcolor="#FFFFFF"><strong>Voce acertou ' + quantidade_acertos + ' de 5</strong></td></tr>';
 							tmp_tabela += '<tr>';
-							tmp_tabela += '<td  bgcolor="#000000"><strong><font color="#FFFFFF">Pergunta</font></strong></td>';
+							tmp_tabela += '<td height="70"   bgcolor="#000000"><strong><font color="#FFFFFF">Pergunta</font></strong></td>';
 							tmp_tabela += '<td bgcolor="#000000"><strong><font color="#FFFFFF">Sua resposta</font></strong></td>';
 							tmp_tabela += '<td bgcolor="#000000"><strong><font color="#FFFFFF">Resultado</font></strong></td>';
 							tmp_tabela += '</tr></thead><tbody>';
@@ -271,7 +271,7 @@
 								var tmp_conteudo1 = perguntas[i];
 								var tmp_matriz1 = tmp_conteudo1.split('*');
 								tmp_tabela += '<tr>';
-								tmp_tabela += '<td>' + tmp_matriz1[1]  +'</td>';
+								tmp_tabela += '<td height="70">' + tmp_matriz1[1]  +'</td>';
 								tmp_tabela += '<td>' + DescricaoResposta(tmp_respostas[i], opcoes_descricoes_FULL) + '</td>';
 								tmp_tabela += '<td>' + ValidarResposta(tmp_respostas[i], opcoes_corretas_FULL) + '</td>';
 								tmp_tabela += '</tr>';

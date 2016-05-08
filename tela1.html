@@ -10,15 +10,18 @@
 		<script type="text/javascript" src="js/scripts.js"></script>
 		<style type="text/css">
 		  body {background-color:#F56200}
-		  h1 {color: #FF0000;  font-size: 36px; text-align:center}
-		  a [type=button]{background-color:#FF0000; text-decoration: none; color: #FFFFFF}
+		  h1 {color: #FF0000;  font-size: 26px; text-align:center}
+		 #btn_responder {background-color:#FF0000; text-decoration: none; color: #FFFFFF}
 		  input[type=radio] {
-				border: 0px;
-				width: 100%;
-				height: 40px;
+				margin-top:5px;
+				margin-left:0px;
+				padding: 0px;
+				width:40px !important;
+				height:40px!important;
+				
 		  }	
 		  
-		  input[type="submit"]{
+		  input[type=submit]{
 				background-color:#FF0000; text-decoration: none; color: #FFFFFF
 			}
 		  
@@ -32,10 +35,13 @@
 			.table-stripe tbody tr:last-child {
 			  border-bottom: 1px solid rgba(0, 0, 0, .1);
 			}
+			.table-stripe td {vertical-align:top; text-align: left;}
 			.table-stripe thead th {
 				background-color: #000000;
 				color: #FFFFFF;
 			}
+			
+			#opcao1_rotulo, #opcao2_rotulo, #opcao3_rotulo, #opcao4_rotulo {font-size: 20px;}
 		</style>
 	</head>
 <body>
@@ -54,14 +60,10 @@
 			
 			<form method="post">
 			<table class="table-stripe" border="0" width="90%" >
-				<thead>
-				<tr>
-					<td colspan="2">&nbsp;</td>
-				</tr>
-				</thead>
+				
 				<tbody>
 				<tr>
-					<td width="40" height="40">
+					<td width="70" height="70">
 						<input type="radio" value="1" name="opcao" id="opcao1">
 					</td>
 					<td>
@@ -69,7 +71,7 @@
 					</td>
 				</tr>	
 				<tr>
-					<td width="40" height="40">
+					<td width="70" height="70">
 						<input type="radio" value="2" name="opcao" id="opcao2">
 					</td>	
 					<td>
@@ -77,7 +79,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td width="40" height="40">
+					<td width="70" height="70">
 						<input type="radio" value="3" name="opcao" id="opcao3">
 					</td>
 					<td>		
@@ -85,7 +87,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td width="40" height="40">
+					<td width="70" height="70">
 						<input type="radio" value="4" name="opcao" id="opcao4">
 					</td>
 					<td>	
@@ -97,7 +99,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="button" id="btn_responder" value="Responder" style="background-color:#FF0000; text-decoration: none; color: #FFFFFF">
+						<a id="btn_responder"  data-role="button">Responder</a>
 						<input type="hidden" name="contador" id="contador" value="1">
 						<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
 						<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
