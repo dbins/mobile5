@@ -26,7 +26,7 @@
 			function networkDetection() {
 				if (isPhoneGapReady) {
 					
-					
+					isConnected = false;
 					var states = {};
 					states[navigator.connection.UNKNOWN]  = 'Unknown connection';
 					states[navigator.connection.ETHERNET] = 'Ethernet connection';
@@ -155,6 +155,7 @@
 			
 			
 			$(document).on('pageshow', '#inicio', function(){
+				alert('*');
 				if (isPhoneGapReady){
 					if (isConnected) {
 						$('#aviso_offline').hide();
@@ -170,6 +171,7 @@
 			});
 			
 			$(document).on('pageshow', '#tela1', function(){
+				alert('*');
 				ValidarNavegacao();
 				$.ajax({
 				type: "GET",
