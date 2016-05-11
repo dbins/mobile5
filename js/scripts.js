@@ -155,7 +155,6 @@
 			
 			
 			$(document).on('pageshow', '#inicio', function(){
-				alert('*');
 				if (isPhoneGapReady){
 					if (isConnected) {
 						$('#aviso_offline').hide();
@@ -171,7 +170,6 @@
 			});
 			
 			$(document).on('pageshow', '#tela1', function(){
-				alert('*');
 				ValidarNavegacao();
 				$.ajax({
 				type: "GET",
