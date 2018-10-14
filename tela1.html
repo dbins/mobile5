@@ -4,14 +4,10 @@
 		<meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
 		<title>Jogo de Perguntas e Respostas</title>
-		<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.mobile.min.js"></script>
-		<script type="text/javascript" src="js/scripts.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
 		<style type="text/css">
-		  body {background-color:#F56200}
-		  h1 {color: #FF0000;  font-size: 26px; text-align:center}
-		 #btn_responder {background-color:#FF0000; text-decoration: none; color: #FFFFFF}
 		  input[type=radio] {
 				margin-top:5px;
 				margin-left:0px;
@@ -21,14 +17,12 @@
 				
 		  }	
 		  
-		  input[type=submit]{
-				background-color:#FF0000; text-decoration: none; color: #FFFFFF
-			}
+		  
 		  
 		  /* Add alternating row stripes */
 			.table-stripe tbody tr:nth-child(odd) td,
 			.table-stripe tbody tr:nth-child(odd) th {
-			  background-color: rgba(0,0,0,0.04);
+			  background-color: #FFEEEE;
 			}
 			/* Add stroke to the header and last item */
 			.table-stripe thead th,
@@ -42,90 +36,118 @@
 			}
 			
 			#opcao1_rotulo, #opcao2_rotulo, #opcao3_rotulo, #opcao4_rotulo {font-size: 20px;}
+			
+			.ui-collapsible-heading {white-space:normal !important;}
+			.ui-collapsible-heading a {white-space:normal !important;}
+			.ui-btn {white-space:normal !important;}
+			.ui-btn-text {white-space:normal !important;}
+			#pergunta {white-space:normal !important;}
+			h3 {white-space:normal !important;}
+			
 		</style>
+		<script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 <body>
 
 	<div data-role="page" id="tela1">
 
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
-			
+			<h1>Perguntas!</h1>
 		</div>
 		
-		<div data-role="main" id="main_tela1">
-			<h1><font color="#FFFFFF">Perguntas!</font></h1>
-			<div id="pergunta"></div>
-			<p>&nbsp;</p>
-			<div id="painel_perguntas">
+		<div data-role="main" id="main_tela1" class="ui-content">
 			
-			<form method="post">
-			<table class="table-stripe" border="0" width="90%" >
-				
-				<tbody>
-				<tr>
-					<td width="70" height="70">
-						<input type="radio" value="1" name="opcao" id="opcao1">
-					</td>
-					<td>
-						<div id="opcao1_rotulo">Opcao 1</div>
-					</td>
-				</tr>	
-				<tr>
-					<td width="70" height="70">
-						<input type="radio" value="2" name="opcao" id="opcao2">
-					</td>	
-					<td>
-						<div id="opcao2_rotulo">Opcao 2</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="70" height="70">
-						<input type="radio" value="3" name="opcao" id="opcao3">
-					</td>
-					<td>		
-						<div id="opcao3_rotulo">Opcao 3</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="70" height="70">
-						<input type="radio" value="4" name="opcao" id="opcao4">
-					</td>
-					<td>	
-						<div id="opcao4_rotulo">Opcao 4</div>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">&nbsp;</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<a id="btn_responder"  data-role="button">Responder</a>
-						<input type="hidden" name="contador" id="contador" value="1">
-						<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
-						<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
-						
-					</td>
-				</tr>
-				</tbody>
-			</table>
-			</form>
+			 <div data-role="collapsible-set" data-theme="a" id="secao_perguntas" data-content-theme="a">
+			<div data-role="collapsible" data-collapsed-icon="flat-time" data-expanded-icon="flat-time" data-collapsed="false">
+			  <h3><div id="pergunta"></div></h3>
+			  <div id="painel_perguntas">
+					
+					<form method="post">
+						<div data-role="fieldcontain">
+						<table class="table-stripe" border="0" width="90%" >
+							
+							<tbody>
+							<tr>
+								<td width="70" height="70">
+									<input type="radio" value="1" data-role="none" name="opcao" id="opcao1">
+								</td>
+								<td>
+									<label for="opcao1"><div id="opcao1_rotulo">Opcao 1</div></label>
+								</td>
+							</tr>	
+							<tr>
+								<td width="70" height="70">
+									<input type="radio" value="2" data-role="none" name="opcao" id="opcao2">
+								</td>	
+								<td>
+									<label for="opcao2"><div id="opcao2_rotulo">Opcao 2</div></label>
+								</td>
+							</tr>
+							<tr>
+								<td width="70" height="70">
+									<input type="radio" value="3" data-role="none" name="opcao" id="opcao3">
+								</td>
+								<td>		
+									<label for="opcao3"><div id="opcao3_rotulo">Opcao 3</div></label>
+								</td>
+							</tr>
+							<tr>
+								<td width="70" height="70">
+									<input type="radio" value="4" data-role="none" name="opcao" id="opcao4">
+								</td>
+								<td>	
+									<label for="opcao4"><div id="opcao4_rotulo">Opcao 4</div></label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a id="btn_responder"  data-role="button" data-theme="d" data-icon="check">Responder</a>
+									<input type="hidden" name="contador" id="contador" value="0">
+									<input type="hidden" name="tmp_acerto" id="tmp_acerto" value="ERRO">
+									<input type="hidden" name="tmp_opcao_selecionada" id="tmp_opcao_selecionada" value="">
+									
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						</div>
+					</form>
+				</div>
 			</div>
+			
+			</div>
+			
+		
+			
 			
 			<div id="painel_respostas" style="display:none;">
 				<div id="tabela_respostas"></div> 	
 				<p>&nbsp;</p>
-				<a href="index.html" data-role="button">Sair</a>
+				<a href="index.html" onclick="apagar()" data-role="button" data-icon="check" data-theme="d">Sair</a>
 			
 			</div>
 		
-		</div>
+		
 
+	</div>
 	</div>
 	
 	<script type="text/javascript" src="libs/fastclick.min.js"></script>
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/javascript">
         $(document).ready(onDeviceReady());
+		$(document).ready(function () {
+			$("#secao_perguntas h3 a").click(function (event) {
+				return false;
+			});
+			$("#secao_perguntas h3").on("tap", function (event, ui) {
+				return false;
+			});
+		});
+		
     </script>
 </body>
 </html>

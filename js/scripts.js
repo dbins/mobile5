@@ -2,7 +2,7 @@
 			
 			//Funcoes do Phonegap
 			var isPhoneGapReady = false;
-			var isConnected = false;
+			var isConnected = true;
 			var isHighSpeed = false;
 			var tipo_conexao = "";
 			var email_aplicativo;
@@ -142,7 +142,7 @@
 			
 			//var perguntas = ["Pergunta1", "Pergunta2", "Pergunta3", "Pergunta4","Pergunta5"];
 			var quantidade_acertos = 0;
-			var codigo_pergunta = 612;
+			var codigo_pergunta = 0;
 			var contador = 1;
 			var perguntas = [];
 			var opcoes_corretas = [];
@@ -152,6 +152,22 @@
 			var tmp_respostas = [];
 			var tmp_acertos = [];
 			
+			function apagar(){
+				quantidade_acertos = 0;
+				codigo_pergunta = 0;
+				contador = 1;
+				perguntas = [];
+				opcoes_corretas = [];
+				opcoes_corretas_FULL = [];
+				opcoes_descricoes = [];
+				opcoes_descricoes_FULL = [];
+				tmp_respostas = [];
+				tmp_acertos = [];
+				$('#tabela_respostas').html('');
+				$("#painel_perguntas").show();
+				$("#secao_perguntas").show();
+				$("#painel_respostas").hide();
+			}
 			
 			
 			$(document).on('pageshow', '#inicio', function(){
@@ -177,57 +193,64 @@
 				dataType: "xml",
 				success: function(data) {
 					
-					$(data).find('pergunta').each(function(){
+						$(data).find('pergunta').each(function(){
+							
+							var codigo = $(this).find("per_cod").text();
+							var pergunta = $(this).find("per_pergunta").text();
+							
+							var tmp_array = [codigo, pergunta];
+							var tmp_conteudo = codigo + '*' + pergunta;
+							perguntas.push(tmp_conteudo);
+						});
+						perguntas = shuffleArray(perguntas);
+						var tmp_conteudo = perguntas[0];
+						var tmp_matriz = tmp_conteudo.split('*');
+						$('#pergunta').html('1 - ' + tmp_matriz[1]);
+						codigo_pergunta = tmp_matriz[0];
 						
-						var codigo = $(this).find("per_cod").text();
-						var pergunta = $(this).find("per_pergunta").text();
+						//Puxando as opcoes de respostas
+						$.ajax({
+						type: "GET",
+						url: "http://www.dbins.com.br/ferramentas/interior/xml/opcao_resposta.xml",
+						dataType: "xml",
+						success: function(data) {
+							
+							$(data).find('opcao_resposta').each(function(){
+								
+								var codigo = $(this).find("opr_cod").text();
+								var descricao = $(this).find("opr_descricao").text();
+								var valida = $(this).find("opr_valida").text();
+								var tmp_conteudo = codigo + '*' + descricao;
+								if (Math.abs(valida)==1){
+									opcoes_corretas.push(codigo);
+								}
+								opcoes_descricoes.push(tmp_conteudo);
+							});
+							opcoes_corretas_FULL = opcoes_corretas;
+							opcoes_descricoes_FULL = opcoes_descricoes;
+							opcoes_descricoes = shuffleArray(opcoes_descricoes);
+							//Carga inicial do sistema
+							ListarOpcoes(codigo_pergunta);
+							},
+							error: function(xhr, status, error) {
+								//alert(status);
+								//alert(xhr.responseText);
+							 }
+						});
 						
-						var tmp_array = [codigo, pergunta];
-						var tmp_conteudo = codigo + '*' + pergunta;
-						perguntas.push(tmp_conteudo);
-					});
-					perguntas = shuffleArray(perguntas);
-					var tmp_conteudo = perguntas[0];
-					var tmp_matriz = tmp_conteudo.split('*');
-					$('#pergunta').html(tmp_matriz[1]);
-					codigo_pergunta = tmp_matriz[0];
+						
 					}
 				});
-				//Puxando as opcoes de respostas
-				$.ajax({
-				type: "GET",
-				url: "http://www.dbins.com.br/ferramentas/interior/xml/opcao_resposta.xml",
-				dataType: "xml",
-				success: function(data) {
-					
-					$(data).find('opcao_resposta').each(function(){
-						
-						var codigo = $(this).find("opr_cod").text();
-						var descricao = $(this).find("opr_descricao").text();
-						var valida = $(this).find("opr_valida").text();
-						var tmp_conteudo = codigo + '*' + descricao;
-						if (Math.abs(valida)==1){
-							opcoes_corretas.push(codigo);
-						}
-						opcoes_descricoes.push(tmp_conteudo);
-					});
-					opcoes_corretas_FULL = opcoes_corretas;
-					opcoes_descricoes_FULL = opcoes_descricoes;
-					opcoes_descricoes = shuffleArray(opcoes_descricoes);
-					},
-					error: function(xhr, status, error) {
-						//alert(status);
-						//alert(xhr.responseText);
-					 }
-				});
 				
-				//Carga inicial do sistema
-				ListarOpcoes(codigo_pergunta);
+				
+				
+				
 				
 				$('#btn_responder').click(function(){
 					
 					contador = $('#contador').val();
-					var tmp_contador = Math.abs(contador) - 1;
+					//var tmp_contador = Math.abs(contador) - 1;
+					var tmp_contador = Math.abs(contador);
 					var tmp_resposta_atual = $('input:radio[name=opcao]:checked').val();
 					
 					if (tmp_resposta_atual != null){
@@ -245,15 +268,15 @@
 						
 						//Incrementando o contador e mostrando a proxima pergunta
 						contador++;
-						var tmp_conteudo = perguntas[tmp_contador];
+						var tmp_conteudo = perguntas[contador];
 						var tmp_matriz = tmp_conteudo.split('*');
 					
-						$('#pergunta').html(contador + ' -  ' + tmp_matriz[1]);
+						$('#pergunta').html((Math.abs(contador)+ 1) + ' -  ' + tmp_matriz[1]);
 						//Atualizado as opcoes
 						codigo_pergunta = tmp_matriz[0];
 						ListarOpcoes(codigo_pergunta);
 						$('#contador').val(contador);
-						if (contador == 6) {
+						if (contador == 5) {
 							$('#pergunta').html('');
 							//Exibir o resultado na mesma pagina
 							
@@ -262,9 +285,9 @@
 							tmp_tabela = '<table data-role="table" data-mode="reflow" class="ui-responsive ui-shadow table-stripe">';
 							tmp_tabela += '<thead><tr><td height="70" colspan="3" align="center" bgcolor="#FFFFFF"><strong>Voce acertou ' + quantidade_acertos + ' de 5</strong></td></tr>';
 							tmp_tabela += '<tr>';
-							tmp_tabela += '<td height="70"   bgcolor="#000000"><strong><font color="#FFFFFF">Pergunta</font></strong></td>';
-							tmp_tabela += '<td bgcolor="#000000"><strong><font color="#FFFFFF">Sua resposta</font></strong></td>';
-							tmp_tabela += '<td bgcolor="#000000"><strong><font color="#FFFFFF">Resultado</font></strong></td>';
+							tmp_tabela += '<td height="70" width="33%"  bgcolor="#000000"><strong><font color="#FFFFFF">Pergunta</font></strong></td>';
+							tmp_tabela += '<td bgcolor="#000000"  width="33%"><strong><font color="#FFFFFF">Sua resposta</font></strong></td>';
+							tmp_tabela += '<td bgcolor="#000000"  width="33%"><strong><font color="#FFFFFF">Resultado</font></strong></td>';
 							tmp_tabela += '</tr></thead><tbody>';
 							
 							for (i = 0; i < 5; i++) {
@@ -280,7 +303,9 @@
 							tmp_tabela += '</tbody></table>';
 							$('#tabela_respostas').html(tmp_tabela);
 							$("#painel_perguntas").hide();
+							$("#secao_perguntas").hide();
 							$("#painel_respostas").show();
+							quantidade_acertos = 0;
 						}
 					} else {
 						alert('Você nao selecionou nenhuma opcao!');
