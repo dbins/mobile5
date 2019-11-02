@@ -2,7 +2,7 @@
 			
 			//Funcoes do Phonegap
 			var isPhoneGapReady = false;
-			var isConnected = true;
+			var isConnected = false;
 			var isHighSpeed = false;
 			var tipo_conexao = "";
 			var email_aplicativo;
@@ -26,7 +26,7 @@
 			function networkDetection() {
 				if (isPhoneGapReady) {
 					
-					isConnected = false;
+					isConnected = true;
 					var states = {};
 					states[navigator.connection.UNKNOWN]  = 'Unknown connection';
 					states[navigator.connection.ETHERNET] = 'Ethernet connection';
